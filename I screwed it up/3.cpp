@@ -60,7 +60,7 @@ int main()
 		case('r'):
 			result = (arr1[0][0] * arr1[1][1] * arr1[2][2]) + (arr1[0][1] * arr1[1][2] * arr1[2][0]) + (arr1[0][2] * arr1[1][0] * arr1[2][1]) - (arr1[2][0] * arr1[1][1] * arr1[0][2]) - (arr1[2][1] * arr1[1][2] * arr1[0][0]) - (arr1[2][2] * arr1[1][0] * arr1[0][1]);
 			printf("|%d %d %d|\n", arr1[0][0], arr1[0][1], arr1[0][2]);
-			printf("|%d %d %d|		=		%d", arr1[1][0], arr1[1][1], arr1[1][2], result);
+			printf("|%d %d %d|		=		%d\n", arr1[1][0], arr1[1][1], arr1[1][2], result);
 			printf("|%d %d %d|\n", arr1[2][0], arr1[2][1], arr1[2][2]);
 			break;
 		case('H'):
