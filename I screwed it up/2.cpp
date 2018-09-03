@@ -7,7 +7,7 @@
 struct LIST
 {
 	int x, y, z;
-	int length;
+	double length;
 };
 
 void func_func(LIST list[10]);
@@ -21,7 +21,7 @@ int main()
 void func_func(LIST list[10])
 {
 	int begin_num = 0;
-	int last_num = begin_num + 1;
+	int last_num = 0;
 	char input = 0;
 	int in_x, in_y, in_z;
 	LIST temp = { 0, };
@@ -31,7 +31,7 @@ void func_func(LIST list[10])
 	{
 		for (int att = 9; att >= 0; --att)
 		{
-			printf("|%d|%d %d %d  l: %d|\n", att, list[att].x, list[att].y, list[att].z, list[att].length);
+			printf("|%d|%d %d %d  l: %lf|\n", att, list[att].x, list[att].y, list[att].z, list[att].length);
 		}
 		scanf_s(" %c", &input);
 		switch (input)
@@ -39,29 +39,41 @@ void func_func(LIST list[10])
 		case '+':
 			scanf_s(" %d %d %d", &in_x, &in_y, &in_z, 4, 4, 4);
 			system("cls");
-			list[last_num-1].x = in_x;
-			list[last_num-1].y = in_y;
-			list[last_num-1].z = in_z;
-			list[last_num-1].length = sqrt(pow((double)in_x, 2) + pow((double)in_y, 2) + pow((double)in_z, 2));
-			empty[last_num-1] = 1;
-			last_num += 1;
+			list[last_num].x = in_x;
+			list[last_num].y = in_y;
+			list[last_num].z = in_z;
+			list[last_num].length = sqrt(pow((double)in_x, 2) + pow((double)in_y, 2) + pow((double)in_z, 2));
+			empty[last_num] = 1;
+			if ((last_num == begin_num)&&last_num==0)
+			{
+				last_num += 1;
+			}
 			break;
 		case 'e':
 			scanf_s(" %d %d %d", &in_x, &in_y, &in_z, 4, 4, 4);
 			system("cls");
 			if (begin_num == 0 && empty[begin_num] == 1)
 			{
-				for (int eyy = last_num; eyy > begin_num; --eyy)
+				if (last_num == 1)
 				{
-
-					list[eyy].x = list[eyy-1].x;
-					list[eyy].y = list[eyy-1].y;
-					list[eyy].z = list[eyy-1].z;
-					list[eyy].length = list[eyy-1].length;
-					empty[eyy] = 1;
-
-
+					list[last_num].x = list[last_num - 1].x;
+					list[last_num].y = list[last_num - 1].y;
+					list[last_num].z = list[last_num - 1].z;
+					list[last_num].length = list[last_num - 1].length;
+					empty[last_num] = 1;
 				}
+				else 
+				{
+					for (int eyy = last_num; eyy >= begin_num; --eyy)
+					{
+						list[eyy + 1].x = list[eyy].x;
+						list[eyy + 1].y = list[eyy].y;
+						list[eyy + 1].z = list[eyy].z;
+						list[eyy + 1].length = list[eyy].length;
+						empty[eyy + 1] = 1;
+					}
+				}
+				
 				list[begin_num].x = in_x;
 				list[begin_num].y = in_y;
 				list[begin_num].z = in_z;
@@ -76,24 +88,28 @@ void func_func(LIST list[10])
 				list[begin_num].z = in_z;
 				list[begin_num].length = sqrt(pow((double)in_x, 2) + pow((double)in_y, 2) + pow((double)in_z, 2));
 				empty[begin_num] = 1;
+				if (last_num==0)
+				{
+					last_num += 1;
+				}
 			}
 			else
 			{
-				list[begin_num].x = in_x;
-				list[begin_num].y = in_y;
-				list[begin_num].z = in_z;
-				list[begin_num].length = sqrt(pow((double)in_x, 2) + pow((double)in_y, 2) + pow((double)in_z, 2));
-				empty[begin_num] = 1;
+				list[begin_num-1].x = in_x;
+				list[begin_num-1].y = in_y;
+				list[begin_num-1].z = in_z;
+				list[begin_num-1].length = sqrt(pow((double)in_x, 2) + pow((double)in_y, 2) + pow((double)in_z, 2));
+				empty[begin_num-1] = 1;
 				begin_num -= 1;
 			}
 			break;
 		case '-':
-			list[last_num - 1].x = 0;
-			list[last_num - 1].y = 0;
-			list[last_num - 1].z = 0;
-			list[last_num - 1].length = 0;
+			list[last_num].x = 0;
+			list[last_num].y = 0;
+			list[last_num].z = 0;
+			list[last_num].length = 0;
 			//empty[last_num] = 0;
-			empty[last_num - 1] = 0;
+			empty[last_num] = 0;
 			last_num -= 1;
 			break;
 		case 'd':
