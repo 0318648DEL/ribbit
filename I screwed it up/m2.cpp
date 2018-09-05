@@ -42,7 +42,7 @@ int main()
 			printf("두번째 원의 좌표를 입력 : ");
 			scanf_s(" %d %d %d %d", &two.left, &two.up, &two.right, &two.down, 4, 4, 4, 4);
 			c = sqrtf((one.middle_x - two.middle_x)*(one.middle_x - two.middle_x) + (one.middle_y - two.middle_y)*(one.middle_y - two.middle_y));
-			if (c <= ((one.up - one.down) / 2) + ((two.up - two.down) / 2))
+			if (c <= (one.width / 2) + (two.width / 2))
 			{
 				printf("원 충돌!\n");
 			}
