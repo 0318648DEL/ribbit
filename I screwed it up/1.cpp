@@ -28,21 +28,21 @@ int main()
 		}
 		while (curr_x < 25 && curr_y < 25)
 		{
-			if (curr_x <= 18 /*&& curr_y < 18*/)
+			if (curr_x <= 20 /*|| curr_y <= 20*/)
 			{
 				c_move = rand() % 2;
 				switch (c_move)
 				{
 				case 0:
-					if (same_move > 5 && p_move != c_move)
+					if (same_move >= 3 && p_move != c_move)
 					{
 						maze[curr_y][curr_x] = 1;
 						++curr_y;
 						p_move = c_move;
-						same_move = 0;
+						same_move = 1;
 						break;
 					}
-					else if (same_move <= 5 && p_move == c_move)
+					else if (same_move < 3 && p_move == c_move)
 					{
 						maze[curr_y][curr_x] = 1;
 						++curr_y;
@@ -50,12 +50,12 @@ int main()
 						++same_move;
 						break;
 					}
-					else if (same_move <= 5 && p_move != c_move)
+					else if (same_move < 3 && p_move != c_move)
 					{
 						maze[curr_y][curr_x] = 1;
 						++curr_y;
 						p_move = c_move;
-						same_move = 0;
+						same_move = 1;
 						break;
 					}
 					else
@@ -63,17 +63,17 @@ int main()
 						break;
 					}
 				case 1:
-					if (curr_x != 24)
+					if (curr_x != 24&&p_move!=1)
 					{
-						if (same_move > 5 && p_move != c_move)
+						if (same_move >= 3 && p_move != c_move)
 						{
 							maze[curr_y][curr_x] = 1;
 							++curr_x;
 							p_move = c_move;
-							same_move = 0;
+							same_move = 1;
 							break;
 						}
-						else if (same_move <= 5 && p_move == c_move)
+						else if (same_move < 3 && p_move == c_move)
 						{
 							maze[curr_y][curr_x] = 1;
 							++curr_x;
@@ -81,12 +81,12 @@ int main()
 							++same_move;
 							break;
 						}
-						else if (same_move <= 5 && p_move != c_move)
+						else if (same_move < 3 && p_move != c_move)
 						{
 							maze[curr_y][curr_x] = 1;
 							++curr_x;
 							p_move = c_move;
-							same_move = 0;
+							same_move = 1;
 							break;
 						}
 						else
@@ -97,65 +97,36 @@ int main()
 
 				}
 			}
-			else if (curr_x > 18 /*&& curr_y > 18*/)
+			else if (curr_x > 20 /*|| curr_y > 20*/)
 			{
 				c_move = rand() % 3;
 				switch (c_move)
 				{
 				case 0:
-					if (same_move > 5 && p_move != c_move)
+					if (24 - curr_y < 5 || same_move >= 5)
 					{
-						maze[curr_y][curr_x] = 1;
-						++curr_y;
-						p_move = c_move;
-						same_move = 0;
-						break;
-					}
-					else if (same_move <= 5 && p_move == c_move)
-					{
-						maze[curr_y][curr_x] = 1;
-						++curr_y;
-						p_move = c_move;
-						++same_move;
-						break;
-					}
-					else if (same_move <= 5 && p_move != c_move)
-					{
-						maze[curr_y][curr_x] = 1;
-						++curr_y;
-						p_move = c_move;
-						same_move = 0;
-						break;
-					}
-					else
-					{
-						break;
-					}
-				case 1:
-					if (curr_x != 24)
-					{
-						if (same_move > 5 && p_move != c_move)
+						if (same_move >= 5 && p_move != c_move)
 						{
 							maze[curr_y][curr_x] = 1;
-							++curr_x;
+							++curr_y;
 							p_move = c_move;
-							same_move = 0;
+							same_move = 1;
 							break;
 						}
-						else if (same_move <= 5 && p_move == c_move)
+						else if (same_move < 5 && p_move == c_move)
 						{
 							maze[curr_y][curr_x] = 1;
-							++curr_x;
+							++curr_y;
 							p_move = c_move;
 							++same_move;
 							break;
 						}
-						else if (same_move <= 5 && p_move != c_move)
+						else if (same_move < 5 && p_move != c_move)
 						{
 							maze[curr_y][curr_x] = 1;
-							++curr_x;
+							++curr_y;
 							p_move = c_move;
-							same_move = 0;
+							same_move = 1;
 							break;
 						}
 						else
@@ -163,31 +134,77 @@ int main()
 							break;
 						}
 					}
-					
+					else
+					{
+						break;
+					}
+				case 1:
+					if (curr_x != 24 && p_move != 2)
+					{
+						if (same_move >= 5 && p_move != c_move)
+						{
+							maze[curr_y][curr_x] = 1;
+							++curr_x;
+							p_move = c_move;
+							same_move = 0;
+							break;
+						}
+						else if (same_move < 5 && p_move == c_move)
+						{
+							maze[curr_y][curr_x] = 1;
+							++curr_x;
+							p_move = c_move;
+							++same_move;
+							break;
+						}
+						else if (same_move < 5 && p_move != c_move)
+						{
+							maze[curr_y][curr_x] = 1;
+							++curr_x;
+							p_move = c_move;
+							same_move = 1;
+							break;
+						}
+						else
+						{
+							break;
+						}
+					}
+					else
+					{
+						break;
+					}
 				case 2:
-					if (same_move > 5 && p_move != c_move)
+					if (p_move != 1)
 					{
-						maze[curr_y][curr_x] = 1;
-						--curr_x;
-						p_move = c_move;
-						same_move = 0;
-						break;
-					}
-					else if (same_move <= 5 && p_move == c_move)
-					{
-						maze[curr_y][curr_x] = 1;
-						--curr_x;
-						p_move = c_move;
-						++same_move;
-						break;
-					}
-					else if (same_move <= 5 && p_move != c_move)
-					{
-						maze[curr_y][curr_x] = 1;
-						--curr_x;
-						p_move = c_move;
-						same_move = 0;
-						break;
+						if (same_move >= 5 && p_move != c_move)
+						{
+							maze[curr_y][curr_x] = 1;
+							--curr_x;
+							p_move = c_move;
+							same_move = 1;
+							break;
+						}
+						else if (same_move < 5 && p_move == c_move)
+						{
+							maze[curr_y][curr_x] = 1;
+							--curr_x;
+							p_move = c_move;
+							++same_move;
+							break;
+						}
+						else if (same_move < 5 && p_move != c_move)
+						{
+							maze[curr_y][curr_x] = 1;
+							--curr_x;
+							p_move = c_move;
+							same_move = 1;
+							break;
+						}
+						else
+						{
+							break;
+						}
 					}
 					else
 					{
@@ -222,3 +239,9 @@ int main()
 	}
 
 }
+
+//void making_maze()
+//{
+//	int rand_dir[4] = { 0,1,2,3 };
+//	
+//}

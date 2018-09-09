@@ -1,1 +1,34 @@
-﻿  I screwed it up.vcxproj -> C:\Users\DEL\Source\Repos\ribbit\x64\Debug\I screwed it up.exe
+﻿  m2.cpp
+c:\users\del\source\repos\ribbit\i screwed it up\m2.cpp(26): warning C4473: 'scanf_s': 서식 문자열에 대한 인수가 충분하게 전달되지 않았습니다.
+  c:\users\del\source\repos\ribbit\i screwed it up\m2.cpp(26): note: 자리 표시자 및 해당 매개 변수에는 variadic 인수가 2개 필요하지만 1개가 제공되었습니다.
+  c:\users\del\source\repos\ribbit\i screwed it up\m2.cpp(26): note: 누락된 variadic 인수 2이(가) 서식 문자열 '%c'에 필요합니다.
+  c:\users\del\source\repos\ribbit\i screwed it up\m2.cpp(26): note: 이 인수는 버퍼 크기로 사용됩니다.
+c:\users\del\source\repos\ribbit\i screwed it up\m2.cpp(32): warning C4474: 'scanf_s' : 서식 문자열에 전달된 인수가 너무 많습니다.
+  c:\users\del\source\repos\ribbit\i screwed it up\m2.cpp(32): note: 자리 표시자 및 해당 매개 변수에는 variadic 인수가 4개 필요하지만 8개가 제공되었습니다.
+c:\users\del\source\repos\ribbit\i screwed it up\m2.cpp(34): warning C4474: 'scanf_s' : 서식 문자열에 전달된 인수가 너무 많습니다.
+  c:\users\del\source\repos\ribbit\i screwed it up\m2.cpp(34): note: 자리 표시자 및 해당 매개 변수에는 variadic 인수가 4개 필요하지만 8개가 제공되었습니다.
+c:\users\del\source\repos\ribbit\i screwed it up\m2.cpp(56): warning C4473: 'scanf_s': 서식 문자열에 대한 인수가 충분하게 전달되지 않았습니다.
+  c:\users\del\source\repos\ribbit\i screwed it up\m2.cpp(56): note: 자리 표시자 및 해당 매개 변수에는 variadic 인수가 2개 필요하지만 1개가 제공되었습니다.
+  c:\users\del\source\repos\ribbit\i screwed it up\m2.cpp(56): note: 누락된 variadic 인수 2이(가) 서식 문자열 '%c'에 필요합니다.
+  c:\users\del\source\repos\ribbit\i screwed it up\m2.cpp(56): note: 이 인수는 버퍼 크기로 사용됩니다.
+c:\users\del\source\repos\ribbit\i screwed it up\m2.cpp(103): warning C4474: 'scanf_s' : 서식 문자열에 전달된 인수가 너무 많습니다.
+  c:\users\del\source\repos\ribbit\i screwed it up\m2.cpp(103): note: 자리 표시자 및 해당 매개 변수에는 variadic 인수가 4개 필요하지만 8개가 제공되었습니다.
+c:\users\del\source\repos\ribbit\i screwed it up\m2.cpp(105): warning C4474: 'scanf_s' : 서식 문자열에 전달된 인수가 너무 많습니다.
+  c:\users\del\source\repos\ribbit\i screwed it up\m2.cpp(105): note: 자리 표시자 및 해당 매개 변수에는 variadic 인수가 4개 필요하지만 8개가 제공되었습니다.
+c:\users\del\source\repos\ribbit\i screwed it up\m2.cpp(119): warning C4244: '=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\del\source\repos\ribbit\i screwed it up\m2.cpp(120): warning C4244: '=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\del\source\repos\ribbit\i screwed it up\m2.cpp(121): warning C4244: '=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\del\source\repos\ribbit\i screwed it up\m2.cpp(122): warning C4244: '=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\del\source\repos\ribbit\i screwed it up\m2.cpp(137): warning C4473: 'scanf_s': 서식 문자열에 대한 인수가 충분하게 전달되지 않았습니다.
+  c:\users\del\source\repos\ribbit\i screwed it up\m2.cpp(137): note: 자리 표시자 및 해당 매개 변수에는 variadic 인수가 2개 필요하지만 1개가 제공되었습니다.
+  c:\users\del\source\repos\ribbit\i screwed it up\m2.cpp(137): note: 누락된 variadic 인수 2이(가) 서식 문자열 '%c'에 필요합니다.
+  c:\users\del\source\repos\ribbit\i screwed it up\m2.cpp(137): note: 이 인수는 버퍼 크기로 사용됩니다.
+c:\users\del\source\repos\ribbit\i screwed it up\m2.cpp(143): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\del\source\repos\ribbit\i screwed it up\m2.cpp(144): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\del\source\repos\ribbit\i screwed it up\m2.cpp(151): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\del\source\repos\ribbit\i screwed it up\m2.cpp(152): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\del\source\repos\ribbit\i screwed it up\m2.cpp(159): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\del\source\repos\ribbit\i screwed it up\m2.cpp(160): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\del\source\repos\ribbit\i screwed it up\m2.cpp(167): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\del\source\repos\ribbit\i screwed it up\m2.cpp(168): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  I screwed it up.vcxproj -> C:\Users\DEL\source\repos\ribbit\x64\Debug\I screwed it up.exe
